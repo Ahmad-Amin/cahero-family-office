@@ -1,7 +1,5 @@
 import React from 'react';
-import { CgInsights } from "react-icons/cg";
-import { FaMoneyBill } from "react-icons/fa6";
-import { RiUserCommunityLine } from "react-icons/ri";
+
 
 const stats = [
   {
@@ -36,7 +34,7 @@ const SourceStats = () => {
       {/* Title Section */}
       <div className="w-full lg:w-2/5 flex items-center justify-center lg:justify-start mb-10 lg:mb-0">
         <h1 className="text-white text-3xl sm:text-5xl font-impact w-full sm:w-2/3">
-          Successful Stats <br /> of <span className="text-[#4675ff]">CAHERO</span> Source
+          Successful Stats <br /> of <span className="text-[#4675ff]">CAHERO</span><br/>Source
         </h1>
       </div>
 

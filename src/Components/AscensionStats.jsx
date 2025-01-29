@@ -33,7 +33,7 @@ const AscensionStats = () => {
       {/* Title Section */}
       <div className="w-full lg:w-2/5 flex items-center justify-center lg:justify-start mb-10 lg:mb-0">
         <h1 className="text-white text-3xl sm:text-5xl font-impact w-full sm:w-2/3">
-          Successful Stats <br /> of <span className="text-[#4675ff]">CAHERO</span> Ascension
+          Successful Stats <br /> of <span className="text-[#4675ff]">CAHERO</span> <br/>Ascension
         </h1>
       </div>
 
