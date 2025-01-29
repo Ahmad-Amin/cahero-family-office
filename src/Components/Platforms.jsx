@@ -3,31 +3,37 @@ import { FaArrowCircleRight } from "react-icons/fa";
 
 const platformsData = [
   {
+    image: "Images/Cahero Source.png",
     title: "Cahero Source",
     description:
       "We offer exclusive private investment opportunities to support high-potential projects and drive growth.",
   },
   {
+    image: "Images/Cahero C.png",
     title: "Cahero Catalyst",
     description:
       "A strategic platform that accelerates innovative projects, turning ideas into reality.",
   },
   {
+    image: "Images/Cahero Unity_512x512 for any favicon 2 1.png",
     title: "Cahero Unity",
     description:
       "Connecting investors and entrepreneurs to create a thriving ecosystem of collaboration and success.",
   },
   {
+    image: "Images/Cahero A.png",
     title: "Cahero Ascension",
     description:
       "Empowering businesses with the resources they need to scale and dominate their industries.",
   },
   {
+    image: "Images/Cahero L.png",
     title: "Cahero Legacy",
     description:
       "Building a sustainable future through strategic investments and long-term vision.",
   },
   {
+    image: "Images/Cahero Unity_512x512 for any favicon 2 1.png",
     title: "Cahero Evolution",
     description:
       "Transforming industries with cutting-edge technology and disruptive innovation.",
@@ -43,7 +49,7 @@ const Platforms = () => {
           className="border border-[#3b3b3b] bg-[#161616] p-6 rounded-lg flex flex-row h-44"
         >
           <img
-            src="Images/Cahero Source.png"
+            src={platform.image}
             alt={platform.title}
             className="w-12 h-12"
           />

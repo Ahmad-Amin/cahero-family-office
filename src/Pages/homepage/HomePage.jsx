@@ -53,7 +53,7 @@ const HomePage = () => {
         <h1 className="font-impact text-2xl sm:text-3xl">Our Platforms</h1>
         <p className="font-barlow opacity-60 text-sm sm:text-lg">
           We offer exclusive private investment opportunities to support
-          high-potential projects and drive growth.
+          high-potential <br/>projects and drive growth.
         </p>
       </div>
       <Platforms />
@@ -64,7 +64,7 @@ const HomePage = () => {
         </h1>
         <p className="font-barlow opacity-60 text-sm sm:text-lg">
           We offer exclusive private investment opportunities to support
-          high-potential projects and drive growth.
+          high-potential <br/>projects and drive growth.
         </p>
       </div>
       <SourceBanner />
@@ -76,7 +76,7 @@ const HomePage = () => {
         </h1>
         <p className="font-barlow opacity-60 text-sm sm:text-lg">
           We offer exclusive private investment opportunities to support
-          high-potential projects and drive growth.
+          high-potential <br/>projects and drive growth.
         </p>
       </div>
       <AscensionBanner />
