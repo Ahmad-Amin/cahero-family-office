@@ -42,11 +42,11 @@ const platformsData = [
 
 const Platforms = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-16 p-6 bg-[#0a0a0a]">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-16 p-6 bg-black">
       {platformsData.map((platform, index) => (
         <div
           key={index}
-          className="border border-[#3b3b3b] bg-[#161616] p-6 rounded-lg flex flex-row h-44"
+          className="border border-[#3b3b3b] bg-[#0a0a0a] p-6 rounded-lg flex flex-row h-44"
         >
           <img
             src={platform.image}
