@@ -3,10 +3,11 @@ import Navbar from "../../Components/Navbar";
 import EventCards from "../../Components/EventCards";
 import CatalystAchievements from "../../Components/CatalystAchievements";
 import MediaCarousel from "../../Components/Carousels/MediaCarousel";
+import NumberCarousel from "../../Components/Carousels/NumberCarousel";
 
 const UnityPage = () => {
   return (
-    <div className="text-white min-h-screen">
+    <div className="text-white min-h-screen overflow-hidden">
       <Navbar />
       <div className="pt-20 w-full flex flex-col-reverse lg:flex-row items-center lg:items-center px-6 lg:px-16">
         <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
@@ -56,11 +57,31 @@ const UnityPage = () => {
         <CatalystAchievements />
       </div>
 
-      <div className="mt-10 z-10 overflow-visible">
+      <div className="mt-10">
+      <NumberCarousel
+        heading={"Top Trending Events"}
+        height="350px"
+        cardheight="200px"
+        cardsSpace={90}
+        slides={4}
+      />
+      </div>
+
+      <div>
         <MediaCarousel
-        heading={"Recently Upload Documentaries"}
+        heading={"Upcomming Masterminds"}
         cardsSpace={10}
         slide={4}/>
+      </div>
+
+      <div>
+      <NumberCarousel
+        heading={"Top Trending Workshops"}
+        height="350px"
+        cardheight="200px"
+        cardsSpace={90}
+        slides={4}
+      />
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ const mediaData = [
   {
     id: 1,
     title: "Event 1",
-    coverImageUrl: "/Images/image.png",
+    coverImageUrl: "/Images/1.png",
     recentlyAdded: true,
     duration: "1 hour 30 mins",
     ageRating: "PG-13",
@@ -24,7 +24,7 @@ const mediaData = [
   {
     id: 2,
     title: "Event 2",
-    coverImageUrl: "/Images/image.png",
+    coverImageUrl: "/Images/2.png",
     recentlyAdded: false,
     duration: "2 hours",
     ageRating: "R",
@@ -37,7 +37,7 @@ const mediaData = [
   {
     id: 3,
     title: "Event 3",
-    coverImageUrl: "/Images/image.png",
+    coverImageUrl: "/Images/5.png",
     recentlyAdded: true,
     duration: "45 mins",
     ageRating: "G",
@@ -50,7 +50,7 @@ const mediaData = [
   {
     id: 4,
     title: "Event 4",
-    coverImageUrl: "/Images/image.png",
+    coverImageUrl: "/Images/6.png",
     recentlyAdded: false,
     duration: "1 hour",
     ageRating: "PG",
@@ -63,7 +63,7 @@ const mediaData = [
   {
     id: 5,
     title: "Event 5",
-    coverImageUrl: "/Images/image.png",
+    coverImageUrl: "/Images/3.png",
     recentlyAdded: true,
     duration: "1 hour 15 mins",
     ageRating: "PG-13",
@@ -84,7 +84,7 @@ const MediaCarousel = ({
 }) => {
   return (
     <div className="p-10 ">
-      <h1 className="text-white font-bold text-xl mb-2">{heading}</h1>
+      <h1 className="text-white font-impact text-xl mb-2">{heading}</h1>
 
       <Swiper
         modules={[Navigation, Pagination]}
@@ -95,7 +95,7 @@ const MediaCarousel = ({
           clickable: true,
           el: ".custom-pagination",
         }}
-        className="relative overflow-hidden"
+        className="relative overflow-visible"
 
         autoplay={{
           delay: 3000,

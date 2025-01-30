@@ -2,9 +2,11 @@ import React from "react";
 import Navbar from "../../Components/Navbar";
 import EventCards from "../../Components/EventCards";
 import CatalystAchievements from "../../Components/CatalystAchievements";
+import MediaCarousel from "../../Components/Carousels/MediaCarousel";
+import NumberCarousel from "../../Components/Carousels/NumberCarousel";
 const LegacyPage = () => {
   return (
-    <div className="text-white min-h-screen">
+    <div className="text-white min-h-screen overflow-hidden">
       <Navbar />
       <div className="pt-20 w-full flex flex-col-reverse lg:flex-row items-center lg:items-center px-6 lg:px-16">
         <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
@@ -47,11 +49,38 @@ const LegacyPage = () => {
         <h1 className="text-white font-impact text-4xl text-center">
           <span className="text-5xl">Achievements</span>
           <br />
-          CAHERO Unity
+          CAHERO Legacy
         </h1>
       </div>
       <div className="mt-5">
         <CatalystAchievements />
+      </div>
+
+      <div className="mt-10">
+      <NumberCarousel
+        heading={"Top Documentaries for you"}
+        height="350px"
+        cardheight="200px"
+        cardsSpace={90}
+        slides={4}
+      />
+      </div>
+
+      <div>
+        <MediaCarousel
+        heading={"Trending Worksops"}
+        cardsSpace={10}
+        slide={4}/>
+      </div>
+
+      <div>
+      <NumberCarousel
+        heading={"Top Audiobook for you"}
+        height="350px"
+        cardheight="200px"
+        cardsSpace={90}
+        slides={4}
+      />
       </div>
     </div>
   );

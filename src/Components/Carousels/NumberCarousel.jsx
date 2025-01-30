@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import MediaCard from "../MediaCard";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import axiosInstance from "../../lib/axiosInstance";
-import LoadingWrapper from "../../ui/LoadingWrapper";
 import "../../index.css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,39 +13,81 @@ const NumberCarousel = ({
   heading,
   height,
   cardheight,
-  axiosURL,
   cardsSpace,
   slides,
 }) => {
-  const [mediaData, setMediaData] = useState([]);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchMediaData = async () => {
-      try {
-        const response = await axiosInstance.get(`${axiosURL}`);
-        setMediaData(response.data.slice(0, 10));
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching media data:", error);
-        setLoading(false);
-      }
-    };
-
-    fetchMediaData();
-  }, [axiosURL]);
-
-  if (loading) {
-    return (
-      <div className="text-white text-center">
-        <LoadingWrapper loading={loading} />
-      </div>
-    );
-  }
+  const mediaData = [
+    {
+      id: 1,
+      title: "Event 1",
+      coverImageUrl: "/Images/7.png",
+      recentlyAdded: true,
+      duration: "1 hour 30 mins",
+      ageRating: "PG-13",
+      tags: ["Webinar", "Technology"],
+      type: "Webinar",
+      author: "John Doe",
+      category: "Tech",
+      genre: "Education",
+    },
+    {
+      id: 2,
+      title: "Event 2",
+      coverImageUrl: "/Images/8.png",
+      recentlyAdded: false,
+      duration: "2 hours",
+      ageRating: "R",
+      tags: ["Webinar", "Design"],
+      type: "Webinar",
+      author: "Jane Smith",
+      category: "Design",
+      genre: "Creative",
+    },
+    {
+      id: 3,
+      title: "Event 3",
+      coverImageUrl: "/Images/4.png",
+      recentlyAdded: true,
+      duration: "45 mins",
+      ageRating: "G",
+      tags: ["Webinar", "Business"],
+      type: "lecture",
+      author: "Alice Brown",
+      category: "Business",
+      genre: "Entrepreneurship",
+    },
+    {
+      id: 4,
+      title: "Event 4",
+      coverImageUrl: "/Images/1.png",
+      recentlyAdded: false,
+      duration: "1 hour",
+      ageRating: "PG",
+      tags: ["Webinar", "Marketing"],
+      type: "lecture",
+      author: "Bob Green",
+      category: "Marketing",
+      genre: "Business",
+    },
+    {
+      id: 5,
+      title: "Event 5",
+      coverImageUrl: "/Images/6.png",
+      recentlyAdded: true,
+      duration: "1 hour 15 mins",
+      ageRating: "PG-13",
+      tags: ["Webinar", "Sales"],
+      type: "Webinar",
+      author: "Charlie Lee",
+      category: "Sales",
+      genre: "Business",
+    },
+  ];
 
   return (
     <div className="p-10">
-      <h1 className="text-white font-bold text-xl mb-2">{heading}</h1>
+      <h1 className="text-white font-impact text-xl mb-2 ">{heading}</h1>
 
       <div className="ml-20">
         <Swiper
@@ -79,7 +119,6 @@ const NumberCarousel = ({
                   cardheight={cardheight}
                   author={media.author}
                   id={media.id}
-                  axiosUrl={axiosURL}
                   category={media.category}
                   genre={media.genre}
                 />
