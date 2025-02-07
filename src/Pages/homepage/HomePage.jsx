@@ -20,7 +20,7 @@ const HomePage = () => {
             <span className="text-[#4675ff]">Impact</span>
           </h1>
           <p className="font-barlow text-sm sm:text-base lg:text-md mt-4 opacity-60 max-w-lg">
-            Cahero Kingdom is a revolutionary platform that combines the
+            Cahero Family Office is a revolutionary platform that combines the
             expertise of the Cahero Family Office and Kingdom to create a
             holistic framework for personal, professional, and financial growth.
             Designed to meet the needs of sophisticated investors,
